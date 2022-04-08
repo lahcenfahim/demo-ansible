@@ -9,23 +9,26 @@ ansible-lint my_file.yaml
 --Trigger a playbook between client and server
 ansible-playbook -i hosts deploy.yaml
 
---Using vault method:
+######## Using vault method ########
 --Encrypt password
 ansible-vault encrypt credentials.yml
 
 --Trigger playbook with encrypted password
 ansible-playbook -i hosts.yml --ask-vault-pass deploy.yml
 
---Using ssh key method:
+######## Using ssh key method ########
 --Generate ssh key from server
 ssh-keygen -t rsa
 
-
 --Copy public key to client
 ssh-copy-id admin@10.0.10.4
-ansible-galaxy install -r roles/requirements.yml
+
 --Check copied key client side
 cat .ssh/authorized_key
--- Roles:
--- Get name of role
 
+######## Roles managment ########
+-- Get name of role
+ansible-galaxy install -r roles/requirements.yml
+
+-- Trigger playbook with role
+ansible-playbook -i hosts.yml --ask-vault-pass wordpress.yml

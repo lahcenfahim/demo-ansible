@@ -1,2 +1,1 @@
-# webapp-ansible-apache
-# demo-ansible
+# ansible-demo

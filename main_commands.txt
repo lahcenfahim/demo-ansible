@@ -1,7 +1,7 @@
-Client adress : 10.0.10.4
-Server adress : 10.0.10.3
-
-main commands:
+######################################
+#### Client adress : 10.0.10.4  ######
+#### Server adress : 10.0.10.3  ######
+######################################
 
 --Check syntax
 ansible-lint my_file.yaml

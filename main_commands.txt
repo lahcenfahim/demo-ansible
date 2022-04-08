@@ -20,8 +20,12 @@ ansible-playbook -i hosts.yml --ask-vault-pass deploy.yml
 --Generate ssh key from server
 ssh-keygen -t rsa
 
+
 --Copy public key to client
 ssh-copy-id admin@10.0.10.4
-
+ansible-galaxy install -r roles/requirements.yml
 --Check copied key client side
-cat .ssh/authorized_keys
+cat .ssh/authorized_key
+-- Roles:
+-- Get name of role
+

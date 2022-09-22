@@ -32,3 +32,4 @@ ansible-galaxy install -r roles/requirements.yml
 
 -- Trigger playbook with role
 ansible-playbook -i hosts.yml --ask-vault-pass wordpress.yml
+-- just a comment
